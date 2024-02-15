@@ -22,7 +22,6 @@ router.get("/:id?", async (req, res, next) => {
 
 router.post("/", async (req, res, next) => {
     try {
-      console.log("I am here");
       let newUser = req.body;
       let data = await db.add(newUser);
       res.json(data);

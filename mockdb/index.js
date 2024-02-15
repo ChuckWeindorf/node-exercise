@@ -39,8 +39,8 @@ class MockDB {
 
   /**
    * Asynchronously adds a mock user object to the dataset.
-   * @param {MockData} newUserDTO
-   * @returns {{ insertedUser: MockData, success: boolean }} an object with two values: insertedRow and success
+   * @param MockData newUserDTO
+   * @returns insertedUser: MockData, success: boolean  an object with two values: insertedRow and success
    */
   async add(newUserDTO) {
     if (this.isValidData(newUserDTO)) {
@@ -64,9 +64,9 @@ class MockDB {
 
   /**
    * Asynchronously finds and updates a mock user object by id.
-   * @param {number} id
-   * @param {MockData} updatedUserDTO
-   * @returns {{ updatedUser: MockData, success: boolean }} an object with two values: updatedRow and success
+   * @param number id
+   * @param MockData updatedUserDTO
+   * @returns updatedUser: MockData, success: boolean an object with two values: updatedRow and success
    */
   async update(id, updatedUserDTO) {
     if (this.isValidData(updatedUserDTO)) {
@@ -112,8 +112,8 @@ class MockDB {
 
   /**
    * Asynchronously finds and removes a mock user object by id.
-   * @param {number} id
-   * @returns {{ removedRowId: number, success: boolean }} an object with two values: removedRowId and success
+   * @param number id
+   * @returns removedRowId: number, success: boolean  an object with two values: removedRowId and success
    */
   async remove(id) {
     this.#data = this.#data.filter((value) => value.id != id);
